@@ -20703,11 +20703,10 @@ var Identicon = React.createClass({
 
 	render: function render() {
 		var uri = identicon.generateSync({
-			id: this.props.hash, size: this.props.size
+			id: this.props.hash,
+			size: this.props.size
 		});
-		console.log(123);
-		console.log();
-		return React.createElement('img', { src: uri });
+		return React.createElement('img', { src: uri, className: this.props.className });
 	}
 });
 

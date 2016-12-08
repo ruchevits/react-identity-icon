@@ -4,12 +4,11 @@ var identicon = require('identicon-browserify')
 var Identicon = React.createClass({
 	render () {
 		var uri = identicon.generateSync({
-			id: this.props.hash, size: this.props.size
+			id: this.props.hash, 
+			size: this.props.size
 		})
-		console.log(123)
-		console.log()
 		return (
-			<img src={uri}/>
+			<img src={uri} className={this.props.className} />
 		)
 	}
 });
